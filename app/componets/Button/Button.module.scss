@@ -1,40 +1,46 @@
 @import '/app/colors.scss';
 
-.container{
+.container {
     border-radius: 8px;
     padding: 14px 29px;
     cursor: pointer;
     border: none;
 }
-.fill{
+
+.fill {
     background-color: $liteInfoColor;
     color: $primaryColor;
 }
-.outline{
-  background-color:$white;
-  color: $sdecondaryTextColor;
-  border:  1px solid $outline;
+
+.outline {
+    background-color: $white;
+    color: $sdecondaryTextColor;
+    border: 1px solid $outline;
 }
-.outline:hover:enabled{
-    background-color:$white;
+
+.outline:hover:enabled {
+    background-color: $white;
     color: $primaryText;
-    border:  1px solid $newPrimaryColor;
+    border: 1px solid $newPrimaryColor;
 }
-.outline:active:enabled{
+
+.outline:active:enabled {
     background-color: $primaryColor;
     color: $backgroundPrimaryColor;
 }
 
 
-.fill:hover:enabled{
+.fill:hover:enabled {
     background-color: $primaryHoverColor;
     color: $backgroundPrimaryColor;
 }
-.fill:active:enabled{
+
+.fill:active:enabled {
     background-color: $primaryColor;
     color: $backgroundPrimaryColor;
 }
-.fill:disabled{
+
+.fill:disabled {
     background-color: $backgroundPrimaryColor;
-    
+
 }
