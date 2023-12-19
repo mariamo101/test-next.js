@@ -1,4 +1,5 @@
 {
+  "homepage": "http://mariamo101.github.io/test-next.js",
   "name": "button-app",
   "version": "0.1.0",
   "private": true,
@@ -6,6 +7,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "predeploy" : "npm run build",
+    "deploy":"gh-pages -d build",
     "lint": "next lint"
   },
   "dependencies": {
@@ -20,6 +23,7 @@
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.0.4",
+    "gh-pages": "^6.1.0",
     "typescript": "^5"
   }
 }
