@@ -1,7 +1,9 @@
 'use client'
 
 import { useState } from "react";
-import "../Todo/Todo.scss"
+import styles from "./Todo.module.scss"
+
+
 
 export default () => {
     const [task, setTask] = useState('');
@@ -16,18 +18,36 @@ export default () => {
         setTask('')
 
     }
+    const [isChecked, setIsChecked] = useState(false)
+
+
+    const checked = () => {
+        setIsChecked(!isChecked)
+        console.log(!isChecked)
+
+    }
+
     return (
+
         <div>
             <input type="text"
                 value={task}
                 onChange={change}
             />
             <button onClick={onAdd}> add </button>
-            <ul className="custom-list">
+            <ul className={styles["custom-list"]}>
                 {tasks.map((task, index) => (
-                    <li key={index} className="custom-list-item">{task}</li>
+                    <li key={index}
+                        className={`${styles["custom-list-item"]} ${index === isChecked ? styles["custom-list-item-completed"] : ''}`}
+                        onClick={checked}
+
+                    >
+                        {isChecked ? index : task}
+
+                    </li>
                 ))}
             </ul>
         </div >
     )
 }
+

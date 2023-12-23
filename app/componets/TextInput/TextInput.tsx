@@ -7,7 +7,7 @@ export default () => {
 
     const [text, setText] = useState('')
 
-    const change = (e) => {
+    const change = (e: React.ChangeEvent<HTMLInputElement>) => {
         setText(e.target.value);
     }
     return (
